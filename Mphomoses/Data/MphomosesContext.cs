@@ -15,5 +15,9 @@ namespace Mphomoses.Data
         }
 
         public DbSet<Mphomoses.Models.Learners> Learners { get; set; } = default!;
+
+        public DbSet<Mphomoses.Models.Facilitators> Facilitators { get; set; } = default!;
+
+        public DbSet<Mphomoses.Models.Courses> Courses { get; set; } = default!;
     }
 }
