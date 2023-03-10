@@ -27,7 +27,7 @@ namespace Mphomoses.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                facilitators = facilitators.Where(s => s.FacilitatorsName!.Contains(searchString));
+                facilitators = facilitators.Where(s => s.FacilitatorsName!.Contains(searchString) || s.FacilitatorsSurname!.Contains(searchString) || s.FacilitatorsId!.ToString().Contains(searchString));
             }
 
             return View(await facilitators.ToListAsync());

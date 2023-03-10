@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mphomoses.Data;
 
@@ -10,9 +11,11 @@ using Mphomoses.Data;
 namespace Mphomoses.Migrations
 {
     [DbContext(typeof(MphomosesContext))]
-    partial class MphomosesContextModelSnapshot : ModelSnapshot
+    [Migration("20230310070849_FourthCommit")]
+    partial class FourthCommit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

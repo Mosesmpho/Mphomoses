@@ -27,9 +27,9 @@ namespace Mphomoses.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                learners = learners.Where(s => s.LearnersName!.Contains(searchString));
+                learners = learners.Where(s => s.LearnersName!.Contains(searchString) || s.LearnersSurname!.Contains(searchString) || s.LearnersIdentityNumber!.ToString().Contains(searchString));
             }
-
+            
             return View(await learners.ToListAsync());
         }
 

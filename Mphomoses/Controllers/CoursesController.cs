@@ -27,7 +27,7 @@ namespace Mphomoses.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                courses = courses.Where(s => s.CourseName!.Contains(searchString));
+                courses = courses.Where(s => s.CourseName!.Contains(searchString) || s.Description!.ToString().Contains(searchString));
             }
 
             return View(await courses.ToListAsync());
